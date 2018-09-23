@@ -9,7 +9,6 @@ const Navigation = () => {
             <p className="Navi"><Link to="/">Home</Link></p>
             <p><Link to="/SignIn/">SignIn</Link></p>
             <p><Link to="/SignUp/">SignUp</Link></p>
-            <p><Link to="/AboutUs/">AboutUs</Link></p>
          </nav>
 	);
 }

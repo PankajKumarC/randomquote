@@ -6,7 +6,6 @@ import Home from './Components/Home/Home';
 import Navigation from './Components/Navigation/Navigation';
 import SignIn from './Components/SignIn/SignIn';
 import SignUp from './Components/SignUp/SignUp';
-import AboutUs from './Components/AboutUs/AboutUs';
 
 class App extends Component {
   render() {
@@ -17,7 +16,6 @@ class App extends Component {
           <Route path="/" exact strict component={Home}/>
           <Route path="/SignIn/" exact strict component={SignIn}/>
           <Route path="/SignUp/" exact strict component={SignUp}/>
-          <Route path="/AboutUs/" exact strict component={AboutUs}/>
           </div>
       </Router>
     );
