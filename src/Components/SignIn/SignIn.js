@@ -3,7 +3,11 @@ import React from 'react';
 
 
 const SignIn = ({loggedIn}) => {
-
+	
+	onSignUp = () => {
+		this.setState({loggedIn : true)};
+	}
+	
 		return (
 			<article className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
 			<main className="pa4 black-80">
@@ -27,7 +31,7 @@ const SignIn = ({loggedIn}) => {
 		      onClick={ }/>
 		    </div>
 		    <div className="lh-copy mt3">
-		      <p className="b ph3 pv2 input-reset green ba b--green bg-transparent hover-bg-white grow pointer f6 dib">Sign up</p>
+		      <p onClick={this.onSignUp} className="b ph3 pv2 input-reset green ba b--green bg-transparent hover-bg-white grow pointer f6 dib">Sign up</p>
 		    </div>
 		  </form>
 		</main>
