@@ -11,14 +11,16 @@ class App extends Component {
   state = {
     loggedIn: false
   }
-  loginHandle = () => {
-    this.setState({loggedIn:true})
+  onClickSignIn = (data) => {
+    if(data === 'success') {
+      this.setState({loggedIn: true})
+    }
   }
   render() {
     return (
       <Router>
         <div className="App">
-          <Navigation loggedIn={this.state.loggedIn} />
+          <Navigation onClickSignIn={this.onClickSignIn} />
           <Route path="/" exact strict component={Home}/>
           <Route path="/SignIn/" exact strict component={SignIn}/>
           <Route path="/SignUp/" exact strict component={SignUp}/>
