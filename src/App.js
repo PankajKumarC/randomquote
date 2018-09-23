@@ -8,7 +8,7 @@ import SignIn from './Components/SignIn/SignIn';
 import SignUp from './Components/SignUp/SignUp';
 
 class App extends Component {
-  state = {
+  this.state = {
     loggedIn: false
   }
   loginHandle = () => {
