@@ -1,7 +1,9 @@
 import React from 'react';
 
 
-const SignIn = ({onRouteChange}) => {
+
+const SignIn = ({loggedIn}) => {
+
 		return (
 			<article className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
 			<main className="pa4 black-80">
@@ -19,13 +21,13 @@ const SignIn = ({onRouteChange}) => {
 		    </fieldset>
 		    <div className="">
 		      <input 
-		      onClick ={ () => onRouteChange('home')}
 		      className="b ph3 pv2 input-reset green ba b--green bg-transparent hover-bg-white grow pointer f6 dib" 
 		      type="submit" 
-		      value="Sign in" />
+		      value="Sign in"
+		      onClick={ }/>
 		    </div>
 		    <div className="lh-copy mt3">
-		      <p onClick ={ () => onRouteChange('SignUp')} className="b ph3 pv2 input-reset green ba b--green bg-transparent hover-bg-white grow pointer f6 dib">Sign up</p>
+		      <p className="b ph3 pv2 input-reset green ba b--green bg-transparent hover-bg-white grow pointer f6 dib">Sign up</p>
 		    </div>
 		  </form>
 		</main>

@@ -3,14 +3,23 @@ import { BrowserRouter as Router, Link} from 'react-router-dom';
 import Route from 'react-router-dom/Route';
 import './Navi.css';
 
-const Navigation = () => {
-	return (
-		<nav style={{display:'flex', justifyContent: 'flex-end'}}>
-            <p className="Navi"><Link to="/">Home</Link></p>
-            <p><Link to="/SignIn/">SignIn</Link></p>
-            <p><Link to="/SignUp/">SignUp</Link></p>
-         </nav>
-	);
+const Navigation = ({loggedIn}) => {
+	if(loggedIn) {
+		return (
+			<nav style={{display:'flex', justifyContent: 'flex-end'}}>
+           		<p className='link pointer grow f3-ns pa3 link b green bg-animate hover-bg-white' ><Link style={{ textDecoration: 'none', color:'#19A974' }} to="/">Sign Out</Link></p>
+         	</nav>
+		);
+	} else {
+		return (
+			<nav style={{display:'flex', justifyContent: 'flex-end'}}>
+           	<p className='link pointer grow f3-ns pa3 link b green bg-animate hover-bg-white' ><Link style={{ textDecoration: 'none', color:'#19A974' }} to="/">Home</Link></p>
+           	<p className='link pointer grow f3-ns pa3 link b green bg-animate hover-bg-white' ><Link style={{ textDecoration: 'none',color:'#19A974' }} to="/SignIn/">Sign In</Link></p>
+           	<p className='link pointer grow f3-ns pa3 link b green bg-animate hover-bg-white'><Link style={{ textDecoration: 'none',color:'#19A974' }} to="/SignUp/">Sign Up</Link></p>
+         	</nav>
+        );
+	}
 }
 
 export default Navigation;
+

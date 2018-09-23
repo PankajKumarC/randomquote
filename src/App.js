@@ -8,11 +8,17 @@ import SignIn from './Components/SignIn/SignIn';
 import SignUp from './Components/SignUp/SignUp';
 
 class App extends Component {
+  state = {
+    loggedIn: false
+  }
+  loginHandle = () => {
+    this.setState({loggedIn:true})
+  }
   render() {
     return (
       <Router>
         <div className="App">
-          <Navigation />
+          <Navigation loggedIn={this.state.loggedIn} />
           <Route path="/" exact strict component={Home}/>
           <Route path="/SignIn/" exact strict component={SignIn}/>
           <Route path="/SignUp/" exact strict component={SignUp}/>

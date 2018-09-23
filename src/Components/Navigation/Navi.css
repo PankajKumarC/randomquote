@@ -1,3 +1,9 @@
-.Navi {
-	color: red;
+
+.link:hover {
+	border-radius: 4px;
+	box-shadow: 2px 2px;
+}
+
+.link:active {
+	box-shadow: none;
 }
