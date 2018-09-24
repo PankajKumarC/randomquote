@@ -1,9 +1,12 @@
 import React from 'react';
+import { BrowserRouter as Router, Link} from 'react-router-dom';
+import Route from 'react-router-dom/Route';
 
 
 
-const SignIn = ({loggedIn}) => {
+const SignIn = ({changeState}) => {
 
+	
 		return (
 			<article className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
 			<main className="pa4 black-80">
@@ -20,14 +23,10 @@ const SignIn = ({loggedIn}) => {
 		      </div>
 		    </fieldset>
 		    <div className="">
-		      <input 
-		      className="b ph3 pv2 input-reset green ba b--green bg-transparent hover-bg-white grow pointer f6 dib" 
-		      type="submit" 
-		      value="Sign in"
-		      onClick={ }/>
+		  <p className='center link pointer grow f3-ns pa3 link b green bg-animate hover-bg-white' onClick={changeState}><Link style={{ textDecoration: 'none',color:'#19A974' }} to="/">Sign In</Link></p>
 		    </div>
 		    <div className="lh-copy mt3">
-		      <p className="b ph3 pv2 input-reset green ba b--green bg-transparent hover-bg-white grow pointer f6 dib">Sign up</p>
+		      <p className='center link pointer grow f3-ns pa3 link b green bg-animate hover-bg-white'><Link style={{ textDecoration: 'none',color:'#19A974' }} to="/SignUp/">Sign Up</Link></p>
 		    </div>
 		  </form>
 		</main>

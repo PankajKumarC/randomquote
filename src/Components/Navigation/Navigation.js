@@ -3,11 +3,11 @@ import { BrowserRouter as Router, Link} from 'react-router-dom';
 import Route from 'react-router-dom/Route';
 import './Navi.css';
 
-const Navigation = ({loggedIn}) => {
+const Navigation = ({loggedIn, onSignOut}) => {
 	if(loggedIn) {
 		return (
 			<nav style={{display:'flex', justifyContent: 'flex-end'}}>
-           		<p className='link pointer grow f3-ns pa3 link b green bg-animate hover-bg-white' ><Link style={{ textDecoration: 'none', color:'#19A974' }} to="/">Sign Out</Link></p>
+           		<p className='link pointer grow f3-ns pa3 link b green bg-animate hover-bg-white' onClick={onSignOut}><Link style={{ textDecoration: 'none', color:'#19A974' }} to="/">Sign Out</Link></p>
          	</nav>
 		);
 	} else {
