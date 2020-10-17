@@ -11,11 +11,13 @@ import { Carousel } from 'react-responsive-carousel';
 import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 class App extends Component {
-
+  constructor() {
+    super();
   this.state = {
+    
     loggedIn: false
 
-  }
+  }}
 
   onClickSignIn = (data) => {
     if(data === 'success') {

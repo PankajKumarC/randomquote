@@ -18,7 +18,7 @@ const Home = () => {
                 </div>
                 <div>
                     <img width="315" height="315" src={image} />
-                    <h1 className="white"> osdifjosdj</h1>                    
+                    <h1 className="white"> </h1>                    
                 </div>
                 </Carousel>
 		</div>
