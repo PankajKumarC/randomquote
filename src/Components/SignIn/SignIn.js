@@ -4,7 +4,15 @@ import Route from 'react-router-dom/Route';
 
 
 
-const SignIn = ({changeState}) => {
+
+const SignIn = ({loggedIn}) => {
+	
+	onSignUp = () => {
+		this.setState({loggedIn : true)};
+	}
+
+
+
 
 	
 		return (
@@ -26,7 +34,9 @@ const SignIn = ({changeState}) => {
 		  <p className='center link pointer grow f3-ns pa3 link b green bg-animate hover-bg-white' onClick={changeState}><Link style={{ textDecoration: 'none',color:'#19A974' }} to="/">Sign In</Link></p>
 		    </div>
 		    <div className="lh-copy mt3">
-		      <p className='center link pointer grow f3-ns pa3 link b green bg-animate hover-bg-white'><Link style={{ textDecoration: 'none',color:'#19A974' }} to="/SignUp/">Sign Up</Link></p>
+
+		      <p onClick={this.onSignUp} className="b ph3 pv2 input-reset green ba b--green bg-transparent hover-bg-white grow pointer f6 dib">Sign up</p>
+
 		    </div>
 		  </form>
 		</main>
