@@ -1,4 +1,7 @@
 import React from 'react';
+import { BrowserRouter as Router, Link} from 'react-router-dom';
+import Route from 'react-router-dom/Route';
+
 
 
 
@@ -7,6 +10,10 @@ const SignIn = ({loggedIn}) => {
 	onSignUp = () => {
 		this.setState({loggedIn : true)};
 	}
+
+
+
+
 	
 		return (
 			<article className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
@@ -24,14 +31,12 @@ const SignIn = ({loggedIn}) => {
 		      </div>
 		    </fieldset>
 		    <div className="">
-		      <input 
-		      className="b ph3 pv2 input-reset green ba b--green bg-transparent hover-bg-white grow pointer f6 dib" 
-		      type="submit" 
-		      value="Sign in"
-		      onClick={ }/>
+		  <p className='center link pointer grow f3-ns pa3 link b green bg-animate hover-bg-white' onClick={changeState}><Link style={{ textDecoration: 'none',color:'#19A974' }} to="/">Sign In</Link></p>
 		    </div>
 		    <div className="lh-copy mt3">
+
 		      <p onClick={this.onSignUp} className="b ph3 pv2 input-reset green ba b--green bg-transparent hover-bg-white grow pointer f6 dib">Sign up</p>
+
 		    </div>
 		  </form>
 		</main>
