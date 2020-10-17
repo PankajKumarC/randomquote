@@ -17,9 +17,11 @@ class App extends Component {
 
   }
 
-  changeState = (e) => {
-    e.preventDefault()
-    this.setState({loggedIn:true})
+  onClickSignIn = (data) => {
+    if(data === 'success') {
+      this.setState({loggedIn: true})
+    }
+
   }
   onSignOut = () => {
     this.setState({loggedIn:false})
@@ -31,7 +33,10 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <Navigation loggedIn={this.state.loggedIn} onSignOut={this.onSignOut} />
+
+          <Navigation onClickSignIn={this.onClickSignIn} />
+
+
           <Route path="/" exact strict component={Home}/>
           <Route path="/SignIn/" exact strict render={() => <SignIn changeState={this.changeState}/>}/>
           <Route path="/SignUp/" exact strict render={() => <SignUp changeState={this.changeState}/>}/>
