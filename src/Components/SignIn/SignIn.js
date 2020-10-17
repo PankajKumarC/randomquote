@@ -5,13 +5,8 @@ import Route from 'react-router-dom/Route';
 
 
 
-const SignIn = ({loggedIn}) => {
-	
-	onSignUp = () => {
-		this.setState({loggedIn : true)};
-	}
 
-
+const SignIn = ({onClickSignIn}) => {
 
 
 	
@@ -31,7 +26,13 @@ const SignIn = ({loggedIn}) => {
 		      </div>
 		    </fieldset>
 		    <div className="">
-		  <p className='center link pointer grow f3-ns pa3 link b green bg-animate hover-bg-white' onClick={changeState}><Link style={{ textDecoration: 'none',color:'#19A974' }} to="/">Sign In</Link></p>
+
+		      <input 
+		      className="b ph3 pv2 input-reset green ba b--green bg-transparent hover-bg-white grow pointer f6 dib" 
+		      type="submit" 
+		      value="Sign in"
+		      onClick={() => onClickSignIn('success') }/>
+
 		    </div>
 		    <div className="lh-copy mt3">
 
