@@ -1,9 +1,15 @@
 import React from 'react';
+import { BrowserRouter as Router, Link} from 'react-router-dom';
+import Route from 'react-router-dom/Route';
+
+
 
 
 
 const SignIn = ({onClickSignIn}) => {
 
+
+	
 		return (
 			<article className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
 			<main className="pa4 black-80">
@@ -20,14 +26,18 @@ const SignIn = ({onClickSignIn}) => {
 		      </div>
 		    </fieldset>
 		    <div className="">
+
 		      <input 
 		      className="b ph3 pv2 input-reset green ba b--green bg-transparent hover-bg-white grow pointer f6 dib" 
 		      type="submit" 
 		      value="Sign in"
 		      onClick={() => onClickSignIn('success') }/>
+
 		    </div>
 		    <div className="lh-copy mt3">
-		      <p className="b ph3 pv2 input-reset green ba b--green bg-transparent hover-bg-white grow pointer f6 dib">Sign up</p>
+
+		      <p onClick={this.onSignUp} className="b ph3 pv2 input-reset green ba b--green bg-transparent hover-bg-white grow pointer f6 dib">Sign up</p>
+
 		    </div>
 		  </form>
 		</main>
